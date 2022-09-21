@@ -1,0 +1,1 @@
+java -jar -Dgreenmail.setup.test.all -Dgreenmail.users.login=testuser:test@localhost -Dgreenmail.auth.disabled ~/Downloads/greenmail-standalone-2.0.0-alpha-2.jar
