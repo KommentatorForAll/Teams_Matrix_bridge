@@ -1,0 +1,35 @@
+Ausarbeitung der Rahmenbedinungen der teams matrix bridge (Name folgend)
+
+Verwendete Technologien:
+Java 18
+Greenmail (mails auslesen)
+Matrix-ClientServer-api (matrix nachrichten senden)
+Log4j (logging)
+junit (Testframework)
+Maven (package manager)
+Spring boot (Dependency Injection)
+
+Anforderungen an das projekt:
+Nachrichten aus teams auslesen und diese in eine Matrixgruppe senden.
+
+Plausiblitätsprüfung und Benötigte Libraries
+MS Teams stellt leider keine API zur verfügung, welche man ohne Adminrechte auf das ausgewählte team nutzen kann.
+Es besteht jedoch die Möglichkeit, immer per Email benachrichtigt zu werden, wenn man eine Teams Nachricht erhält.
+In diesem Bezug gibt es viele Frameworks, wie das oben gennante Greenmail, um sich auf mail servern einzuloggen und mails und deren content auszulesen.
+Hierrüber können die benötigten Informationen bezogen werden.
+Zur verbindung mit dem Matrix server/des matrix Bots kann die Java bibliothek "Matrix-ClientServer-Api" verwendet werden.
+Da matrix auf die Zur verfügungstellung von sog. Bridges ausgelegt ist (https://matrix.org/bridges/), bestehen hier keine weriten schwierigkeiten.
+Es wird ein Dependency Injection framework (Spring boot) verwendet, um die Applikations leichter erweiterbar zu machen, bspw. durch eine Discord anbindung.
+
+Als grundlegende Sprache wird Java verwendet werden, da der Unterricht auf Java ausgelegt ist.
+
+
+In dem Projekt wird nach dem Erweiterten Wasswerfallmodell gehandelt werden, d.h. Planung, implementierung, testen, deployment mit der möglichkeit vom test zurück in dei implementierung zu gehen sollten unerwartete Fehler auftreten.
+
+Das Erstellen automatisierter Tests ist vorgegeben.
+
+Das Projekt ist vollständig zu dokumentieren und unter der Apache 2.0 Lizenz zu veröffentlichen.
+
+Der Code und dessen Dokumentation sind in Englisch zu verfassen, die Projektdokumentation  auf deutsch.
+
+Als Projektarchitektur wird die Hexagonalarchitektur nach "A Philosiphy of software desgin" von John Ousterhout, da dieses extrem modular ist, und eine typischte 3-Ebenenarchitektur der Webentwicklung nicht anwendbar ist, da wir keine Datenbank und kein wirkliches web interface besitzen.
